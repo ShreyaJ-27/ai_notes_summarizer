@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Note Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Note Assistant</h1>
+        
+        <div class="main-grid">
+            <!-- Left: Notes Input -->
+            <div class="notes-section">
+                <h2>Your Notes</h2>
+                <textarea id="notesInput" placeholder="Paste your notes here..."></textarea>
+            </div>
+            
+            <!-- Right: AI Output -->
+            <div class="output-section">
+                <div class="tabs">
+                    <button class="tab active" data-tab="summarize">Summarize</button>
+                    <button class="tab" data-tab="chat">Chat</button>
+                </div>
+                
+                <div id="summarizeTab" class="tab-content active">
+                    <button id="summarizeBtn">Generate Summary</button>
+                    <div id="summaryOutput"></div>
+                </div>
+                
+                <div id="chatTab" class="tab-content">
+                    <div id="chatMessages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Ask about your notes...">
+                        <button id="sendBtn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
